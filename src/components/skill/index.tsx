@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import type { Skill as SkillType } from "../../type/skill-type";
+import type { Skill as SkillType } from "../../types/skill-type";
 
 export default function Skill({ icon, title, level, description }: SkillType) {
   const stars = "★".repeat(level) + "☆".repeat(5 - level);

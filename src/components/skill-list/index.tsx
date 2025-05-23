@@ -1,5 +1,5 @@
 import Skill from "../skill";
-import type { Skill as SkillType } from "../../type/skill-type";
+import type { Skill as SkillType } from "../../types/skill-type";
 import styles from "./style.module.css";
 
 type Props = {
