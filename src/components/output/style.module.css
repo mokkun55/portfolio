@@ -1,0 +1,57 @@
+.item {
+  width: 400px;
+  display: flex;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 20px;
+  background: var(--color-white);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+
+      .title {
+        color: var(--text-hero-title);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .dateContainer {
+        margin-top: -4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--text-date);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+    .description {
+      color: var(--text-body);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .link {
+      width: 100%;
+      text-align: right;
+      
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

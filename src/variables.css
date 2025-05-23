@@ -13,9 +13,10 @@
   --button-bg-hover: #2563eb;
 
   /* タブ */
-  --text-tab: #3b82f6;
-  --tab-bg-: #e0f2fe;
-  --tag-bg-hover: #bfdbfe;
+  --tab-bg-1: #3b82f6;
+  --tab-bg-2: #e0f2fe;
+  --tab-bg-hover: #bfdbfe;
+  --tab-text: #3b82f6;
 
   /* 色 */
   --color-bg: #f0f9ff;
