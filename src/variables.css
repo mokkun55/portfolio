@@ -1,3 +1,27 @@
 :root {
-  /*  */
+  /* テキスト */
+  --text-title: #2563eb;
+  --text-body: #374151;
+  --text-sub: #4b5563;
+  --text-date: #9ca3af;
+  --text-hero-title: #1f2937;
+  --link: #2563eb;
+  --link-hover: #1d4ed8;
+
+  /* ボタン */
+  --button-bg: #3b82f6;
+  --button-bg-hover: #2563eb;
+
+  /* タブ */
+  --text-tab: #3b82f6;
+  --tab-bg-: #e0f2fe;
+  --tag-bg-hover: #bfdbfe;
+
+  /* 色 */
+  --color-yellow: #fbbf24;
+  --color-green: #25eb25;
+  --color-grad-1: #e0f2fe;
+  --color-grad-2: #e0e7ff;
+  --color-white: #fff;
+  --color-footer-bg: #1f2937;
 }
