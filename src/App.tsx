@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import Header from "./components/header";
-import Hero from "./components/hero";
+import Hero from "./sections/hero";
+import Skills from "./sections/skills";
 
 export default function App() {
   return (
@@ -10,6 +11,9 @@ export default function App() {
 
       {/* ヒーロー */}
       <Hero />
+
+      {/* スキル */}
+      <Skills />
     </div>
   );
 }
