@@ -4,6 +4,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* 背景色 */
+  background: linear-gradient(
+    109deg,
+    var(--color-grad-1) 0.57%,
+    var(--color-grad-2) 99.43%
+  );
 
   .content {
     display: flex;
