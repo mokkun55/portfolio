@@ -4,6 +4,7 @@ import Hero from "./sections/hero";
 import Skills from "./sections/skills";
 import Works from "./sections/works";
 import Outputs from "./sections/outputs";
+import Contact from "./sections/contact";
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
 
       {/* アウトプット */}
       <Outputs />
+
+      {/* 連絡先 */}
+      <Contact />
     </div>
   );
 }
