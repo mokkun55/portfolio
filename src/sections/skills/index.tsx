@@ -55,7 +55,7 @@ export default function Skills() {
       description: "基本的なバージョン管理とチーム開発ができます",
     },
   ];
-  
+
   return (
     <SectionLayout sectionTitle="Skills">
       <div className={styles.container}>
