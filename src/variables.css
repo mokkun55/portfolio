@@ -22,8 +22,8 @@
   --color-bg: #f0f9ff;
   --color-yellow: #fbbf24;
   --color-green: #25eb25;
-  --color-grad-1: #f0f9ff;
-  --color-grad-2: #e5f8ff;
+  --color-grad-1: #fff;
+  --color-grad-2: #f0f9ff;
   --color-white: #fff;
   --color-footer-bg: #1f2937;
 
@@ -31,5 +31,5 @@
   --border-color: #ccc;
 
   /* hero circle */
-  --hero-circle: #ffffffe3;
+  --hero-circle: #b8e3ffbe;
 }
