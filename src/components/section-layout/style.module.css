@@ -6,3 +6,10 @@
   align-items: center;
   gap: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px 0px;
+    gap: 16px;
+  }
+}

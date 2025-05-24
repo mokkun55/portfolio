@@ -28,3 +28,11 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .tab {
+    width: 80px;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+}

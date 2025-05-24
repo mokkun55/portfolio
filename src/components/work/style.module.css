@@ -109,3 +109,10 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    /* TODO レスポンシブホントは%でしたくないどうにかする */
+    width: 90%;
+  }
+}

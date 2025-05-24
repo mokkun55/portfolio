@@ -10,3 +10,13 @@
     gap: 64px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 16px;
+
+    .tabContainer {
+      gap: 32px;
+    }
+  }
+}
