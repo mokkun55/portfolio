@@ -63,9 +63,9 @@ export default function Skills() {
         <div className={styles.otherSkillsContainer}>
           <p className={styles.otherSkillsTitle}>その他利用経験あり</p>
           <p className={styles.otherSkillsDescription}>
-            Scss / Tailwind / MUI / Mantine / Java / Python / Node.js / Express
-            / ReactNative / Expo / Firebase / Supabase / Prisma / GitHubActions
-            / Vercel
+            Scss / Tailwind / MUI / Mantine / FramerMotion / Java / Python /
+            Node.js / Express / ReactNative / Expo / Firebase / Supabase /
+            Prisma / GitHubActions / Vercel
           </p>
         </div>
       </div>
