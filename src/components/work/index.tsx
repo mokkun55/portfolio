@@ -10,7 +10,15 @@ type Props = {
 export default function Work({ work }: Props) {
   return (
     <div className={styles.container}>
-      <img src={work.image} alt={work.title} className={styles.image} />
+      <img
+        // TODO cmsのimageAPI使ってもいいかも
+        // https://document.microcms.io/image-api/size
+        src={work.image.url}
+        alt={work.title}
+        className={styles.image}
+        width={work.image.width}
+        height={work.image.height}
+      />
 
       <div className={styles.content}>
         <div className={styles.titleContainer}>

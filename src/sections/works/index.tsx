@@ -1,96 +1,22 @@
 import styles from "./style.module.css";
 import { SectionLayout } from "../../components/section-layout";
 import WorkList from "../../components/work-list";
+import { client } from "../../libs/cms";
+import { useEffect, useState } from "react";
+import type { Work as WorkType, WorkResponse } from "../../types/work-type";
 
 export default function Works() {
-  // TODO mock
-  const works = [
-    {
-      title: "ポートフォリオサイト",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock1.png",
-      techStack: ["React", "TypeScript"],
-      pageLink: "https://www.google.com",
-      githubLink: "https://www.google.com",
-      figmaLink: "https://www.google.com",
-    },
-    {
-      title: "プログラミング部HP",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock2.png",
-      techStack: ["Next", "TypeScript"],
-    },
-    {
-      title: "ポートフォリオサイト",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock1.png",
-      techStack: ["React", "TypeScript"],
-      pageLink: "https://www.google.com",
-      githubLink: "https://www.google.com",
-      figmaLink: "https://www.google.com",
-    },
-    {
-      title: "プログラミング部HP",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock2.png",
-      techStack: ["Next", "TypeScript"],
-    },
-    {
-      title: "ポートフォリオサイト",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock1.png",
-      techStack: ["React", "TypeScript"],
-      pageLink: "https://www.google.com",
-      githubLink: "https://www.google.com",
-      figmaLink: "https://www.google.com",
-    },
-    {
-      title: "プログラミング部HP",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock2.png",
-      techStack: ["Next", "TypeScript"],
-    },
-    {
-      title: "ポートフォリオサイト",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock1.png",
-      techStack: ["React", "TypeScript"],
-      pageLink: "https://www.google.com",
-      githubLink: "https://www.google.com",
-      figmaLink: "https://www.google.com",
-    },
-    {
-      title: "プログラミング部HP",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock2.png",
-      techStack: ["Next", "TypeScript"],
-    },
-    {
-      title: "ポートフォリオサイト",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock1.png",
-      techStack: ["React", "TypeScript"],
-      pageLink: "https://www.google.com",
-      githubLink: "https://www.google.com",
-      figmaLink: "https://www.google.com",
-    },
-    {
-      title: "プログラミング部HP",
-      description:
-        "〇〇という課題を解決するために、△△なアプローチで開発しました。 レスポンシブデザインとアクセシビリティにも配慮しています。",
-      image: "/images/mocks/mock2.png",
-      techStack: ["Next", "TypeScript"],
-    },
-  ];
+  const [works, setWorks] = useState<WorkType[]>([]);
+
+  // cms取得
+  useEffect(() => {
+    const fetchWorks = async () => {
+      const works = await client.get<WorkResponse>({ endpoint: "works" });
+      setWorks(works.contents);
+      console.log(works);
+    };
+    fetchWorks();
+  }, []);
 
   return (
     <SectionLayout sectionTitle="Works">
