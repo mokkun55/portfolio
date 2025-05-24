@@ -9,7 +9,7 @@ type Props = {
 
 export default function OutputList({ outputs, filter }: Props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key={filter}>
       {outputs
         .filter((output) => {
           if (filter === "all") return true;
