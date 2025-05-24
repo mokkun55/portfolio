@@ -11,9 +11,9 @@ export default function Work({ work }: Props) {
   return (
     <div className={styles.container}>
       <img
-        // TODO cmsのimageAPI使ってもいいかも
+        // cmsのimageAPI
         // https://document.microcms.io/image-api/size
-        src={work.image.url}
+        src={`${work.image.url}?w=1600&h=904&fit=fill&fill=blur`}
         alt={work.title}
         className={styles.image}
         width={work.image.width}
