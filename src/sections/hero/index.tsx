@@ -1,4 +1,5 @@
 import styles from "./style.module.css";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Hero() {
   return (
@@ -21,7 +22,23 @@ export default function Hero() {
           学生寮で寮長やってます。
         </p>
       </div>
-      {/* TODO スクロールを促す矢印アイコン */}
+      <IoIosArrowDown className={styles.arrow} size={50} />
+
+      {/* 背景の四角 */}
+      <div className={styles.area}>
+        <ul className={styles.circles}>
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+          <li />
+        </ul>
+      </div>
     </div>
   );
 }

@@ -22,11 +22,14 @@
   --color-bg: #f0f9ff;
   --color-yellow: #fbbf24;
   --color-green: #25eb25;
-  --color-grad-1: #e0f2fe;
-  --color-grad-2: #e0e7ff;
+  --color-grad-1: #f0f9ff;
+  --color-grad-2: #e5f8ff;
   --color-white: #fff;
   --color-footer-bg: #1f2937;
 
   /* ボーダー */
   --border-color: #ccc;
+
+  /* hero circle */
+  --hero-circle: #ffffffe3;
 }
