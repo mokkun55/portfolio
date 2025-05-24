@@ -10,7 +10,7 @@ export default function Output({ output }: Props) {
   return (
     <div className={styles.item} key={output.title}>
       <div className={styles.icon}>
-        {output.type === "article" ? (
+        {output.type[0] === "article" ? (
           <RiArticleLine color="var(--text-title)" size={32} />
         ) : (
           <RiSlideshowLine color="var(--color-yellow)" size={32} />
@@ -31,7 +31,7 @@ export default function Output({ output }: Props) {
         <div className={styles.description}>{output.description}</div>
         <div className={styles.link}>
           <a href={output.link} target="_blank" rel="noopener noreferrer">
-            {output.type === "article" ? "記事を読む" : "スライドを見る"}
+            {output.type[0] === "article" ? "記事を読む" : "スライドを見る"}
           </a>
         </div>
       </div>

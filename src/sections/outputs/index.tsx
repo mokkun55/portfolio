@@ -1,70 +1,33 @@
 import styles from "./style.module.css";
 import { SectionLayout } from "../../components/section-layout";
 import Tabs from "../../components/tabs";
-import { useState } from "react";
-import type { Output as OutputType } from "../../types/output-type";
+import { useState, useEffect } from "react";
 import OutputList from "../../components/output-list";
+import { client } from "../../libs/cms";
+import type { Output, OutputResponse } from "../../types/output-type";
 
 export default function Outputs() {
-  const [outputs] = useState<OutputType[]>([
-    {
-      type: "article",
-      title: "58ハッカソンに参戦しました！",
-      date: new Date("2025-01-01"),
-      place: "東京",
-      description:
-        "メンター枠で参戦しました！前回よりもレベルが上っててすごく、面白かったです！！",
-      link: "https://react.dev",
-    },
-    {
-      type: "slide",
-      title: "LT会に参加しました！",
-      date: new Date("2025-01-01"),
-      place: "オンライン",
-      description:
-        "ReactがテーマのLT会をしました！自分は〇〇について発表しましたみなさんのスライドも面白かったです！！",
-      link: "https://react.dev",
-    },
-    {
-      type: "article",
-      title: "58ハッカソンに参戦しました！",
-      date: new Date("2025-01-01"),
-      place: "東京",
-      description:
-        "メンター枠で参戦しました！前回よりもレベルが上っててすごく、面白かったです！！",
-      link: "https://react.dev",
-    },
-    {
-      type: "slide",
-      title: "LT会に参加しました！",
-      date: new Date("2025-01-01"),
-      place: "オンライン",
-      description:
-        "ReactがテーマのLT会をしました！自分は〇〇について発表しましたみなさんのスライドも面白かったです！！",
-      link: "https://react.dev",
-    },
-    {
-      type: "article",
-      title: "58ハッカソンに参戦しました！",
-      date: new Date("2025-01-01"),
-      description:
-        "メンター枠で参戦しました！前回よりもレベルが上っててすごく、面白かったです！！",
-      link: "https://react.dev",
-    },
-    {
-      type: "slide",
-      title: "LT会に参加しました！",
-      date: new Date("2025-01-01"),
-      place: "オンライン",
-      description:
-        "ReactがテーマのLT会をしました！自分は〇〇について発表しましたみなさんのスライドも面白かったです！！",
-      link: "https://react.dev",
-    },
-  ]);
-
+  const [outputs, setOutputs] = useState<Output[]>([]);
   const [activeTab, setActiveTab] = useState<"all" | "article" | "slide">(
     "all"
   );
+
+  // cms取得
+  useEffect(() => {
+    const fetchOutputs = async () => {
+      const outputs = await client.get<OutputResponse>({ endpoint: "outputs" });
+      // 日付をDate型に変換してソート
+      const formattedOutputs = outputs.contents
+        .map((output) => ({
+          ...output,
+          date: new Date(output.date),
+        }))
+        .sort((a, b) => b.date.getTime() - a.date.getTime()) as Output[];
+      setOutputs(formattedOutputs);
+      console.log(outputs);
+    };
+    fetchOutputs();
+  }, []);
 
   return (
     <SectionLayout sectionTitle="Outputs">

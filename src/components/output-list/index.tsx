@@ -13,7 +13,7 @@ export default function OutputList({ outputs, filter }: Props) {
       {outputs
         .filter((output) => {
           if (filter === "all") return true;
-          return output.type === filter;
+          return output.type[0] === filter;
         })
         .map((output, index) => (
           <Output output={output} key={`${output.title}-${index}`} />

@@ -43,12 +43,13 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      white-space: pre-wrap;
     }
 
     .link {
       width: 100%;
       text-align: right;
-      
+
       a {
         text-decoration: underline;
       }
