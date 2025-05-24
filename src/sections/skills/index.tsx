@@ -58,7 +58,7 @@ export default function Skills() {
 
   return (
     <SectionLayout sectionTitle="Skills">
-      <div className={styles.container}>
+      <div className={styles.container} id="skills">
         <SkillList skills={skills} />
         <div className={styles.otherSkillsContainer}>
           <p className={styles.otherSkillsTitle}>その他利用経験あり</p>

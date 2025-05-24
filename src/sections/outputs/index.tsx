@@ -31,7 +31,7 @@ export default function Outputs() {
 
   return (
     <SectionLayout sectionTitle="Outputs">
-      <div className={styles.container}>
+      <div className={styles.container} id="outputs">
         <div className={styles.tabContainer}>
           <Tabs
             label="すべて"

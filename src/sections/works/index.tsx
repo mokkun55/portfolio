@@ -20,7 +20,7 @@ export default function Works() {
 
   return (
     <SectionLayout sectionTitle="Works">
-      <div className={styles.container}>
+      <div className={styles.container} id="works">
         <WorkList works={works} />
       </div>
     </SectionLayout>

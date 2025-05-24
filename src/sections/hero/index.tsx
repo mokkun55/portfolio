@@ -2,7 +2,7 @@ import styles from "./style.module.css";
 
 export default function Hero() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="home">
       <div className={styles.content}>
         <img
           src="/images/icon.jpg"

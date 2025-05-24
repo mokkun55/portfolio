@@ -8,7 +8,7 @@ import { SiZenn } from "react-icons/si";
 export default function Contact() {
   return (
     <SectionLayout sectionTitle="Contact">
-      <div className={styles.container}>
+      <div className={styles.container} id="contact">
         <ContactCard
           icon={<FaTwitter size={40} />}
           title="Twitter"

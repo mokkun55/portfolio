@@ -12,3 +12,7 @@ body {
     color: var(--link);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
